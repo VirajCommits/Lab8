@@ -42,8 +42,8 @@ public class CustomListTest {
         City city1 = new City("Charlottetown", "Prince Edward Island");
         City city2 = new City("Edmonton", "Alberta");
         City city3 = new City("Toronto", "Ontario");
-        list.add(city1);
-        list.add(city2);
+        list.addCity(city1);
+        list.addCity(city2);
         list.delete(city1);
 
         assertThrows( IllegalArgumentException.class, () -> {
@@ -51,7 +51,7 @@ public class CustomListTest {
 
 
 
-        assertTrue(list.hasCity(city1));
+        assertFalse(list.hasCity(city1));
 
         assertTrue(list.hasCity(city2));
 
